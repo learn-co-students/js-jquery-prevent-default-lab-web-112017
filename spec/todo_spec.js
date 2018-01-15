@@ -1,7 +1,6 @@
 describe('To Do List', function() {
 
   beforeEach(function() {
-
     setFixtures('<body><h1> TO DO LIST</h1><h3> Your List</h3><div id="list"><ol></ol></div><h3> Add Items To Your List</h3><form><label form="item" name="item"><input type="text" id="item"><input type="submit" value="submit"></form></body>');
   });
 
@@ -21,7 +20,6 @@ describe('To Do List', function() {
     $('#item').val("eat chips");
     $('form').submit();
     expect($("#list ol li")[0].innerHTML).toEqual("finish this lab");
-    // debugger;
     expect($("#list ol li:last")[0].innerHTML).toEqual("eat chips")
 
   });
